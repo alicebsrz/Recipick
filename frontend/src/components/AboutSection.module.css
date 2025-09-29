@@ -1,0 +1,53 @@
+/* frontend/src/components/AboutSection.module.css */
+
+.section {
+  padding: 5rem 1.5rem;
+  background-color: #E6F4EA; /* Nosso Verde Claro Pastel */
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; /* Mobile-first: empilhado */
+  align-items: center;
+  gap: 3rem;
+}
+
+/* Layout de 2 colunas para desktop */
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
+}
+
+.textColumn {
+  flex: 1;
+  text-align: left;
+}
+
+.imageColumn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-family: var(--font-montserrat);
+  font-size: 2.25rem; /* 36px */
+  font-weight: 700;
+  color: #2D3748;
+  margin-bottom: 1.5rem;
+}
+
+.text {
+  font-family: var(--font-open-sans);
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.8;
+  color: #4A5568;
+}
+
+.text p:not(:last-child) {
+  margin-bottom: 1rem;
+}

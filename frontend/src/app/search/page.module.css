@@ -1,0 +1,95 @@
+/* frontend/src/app/search/page.module.css */
+.main {
+  padding: 2rem;
+  min-height: calc(100vh - 80px);
+  background-color: #F8F7F2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  background-color: #FFFFFF;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.title {
+  font-family: var(--font-montserrat);
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2D3748;
+  margin-bottom: 1rem;
+}
+
+.form {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.input {
+  flex-grow: 1;
+  padding: 0.75rem;
+  border: 1px solid #D1D5DB;
+  border-radius: 0.5rem;
+}
+
+.addButton {
+  background-color: #6DBE45; /* Verde Primário */
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: opacity 0.3s;
+}
+
+.ingredientsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  min-height: 50px; /* Garante um espaço mínimo */
+}
+
+.ingredientTag {
+  display: flex;
+  align-items: center;
+  background-color: #E6F4EA; /* Verde Claro */
+  color: #2D3748;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-weight: 600;
+}
+
+.removeButton {
+  margin-left: 0.75rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #9CA3AF;
+}
+.removeButton:hover {
+  color: #2D3748;
+}
+
+.searchButton {
+  background-color: #FF7B54; /* Laranja Acento */
+  color: white;
+  font-family: var(--font-montserrat);
+  font-weight: 700;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  font-size: 1.125rem;
+  transition: all 0.3s;
+}
+.searchButton:disabled {
+  background-color: #FABE98;
+  cursor: not-allowed;
+}

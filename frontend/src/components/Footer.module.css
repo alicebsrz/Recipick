@@ -1,0 +1,79 @@
+/* frontend/src/components/Footer.module.css */
+.footer {
+  background-color: #2D3748; /* Cor carvão do nosso texto */
+  color: #E2E8F0; /* Um cinzento claro para o texto */
+  padding: 3rem 1.5rem;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; /* Mobile-first */
+  gap: 2rem;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column; /* Mobile-first */
+  justify-content: space-between;
+  gap: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #4A5568;
+}
+
+.aboutSection {
+  max-width: 300px;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-montserrat);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+}
+
+.linksGrid {
+  display: flex;
+  gap: 3rem;
+}
+
+.linksColumn h3 {
+  font-family: var(--font-montserrat);
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+}
+
+.linksColumn ul {
+  list-style: none;
+  padding: 0;
+}
+
+.linksColumn a {
+  text-decoration: none;
+  color: #A0AEC0;
+  transition: color 0.3s;
+}
+
+.linksColumn a:hover {
+  color: #FFFFFF;
+}
+
+.copyright {
+  text-align: center;
+  color: #A0AEC0;
+  font-size: 0.875rem;
+}
+
+/* Layout para desktop */
+@media (min-width: 768px) {
+  .mainContent {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}

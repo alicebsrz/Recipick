@@ -1,0 +1,93 @@
+/* frontend/src/app/favorites/page.module.css */
+.main {
+  min-height: 100vh;
+  background-color: #F8F7F2;
+  font-family: var(--font-open-sans);
+  padding: 2rem;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.title {
+  font-family: var(--font-montserrat);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #2D3748;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.loadingOrError {
+  text-align: center;
+  font-size: 1.125rem;
+  padding: 4rem 0;
+  color: #4A5568;
+}
+
+.emptyState {
+  text-align: center;
+  background-color: #FFFFFF;
+  padding: 2.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.emptyImage {
+  margin: 0 auto 1.5rem;
+}
+
+.emptyTitle {
+  font-family: var(--font-montserrat);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2D3748;
+  margin-bottom: 0.5rem;
+}
+
+.emptyDescription {
+  color: #6B7280;
+  margin-bottom: 1.5rem;
+}
+
+.ctaButton {
+  display: inline-block;
+  background-color: #FF7B54;
+  color: white;
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.ctaButton:hover {
+  opacity: 0.9;
+}
+
+/* Media queries para responsividade */
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

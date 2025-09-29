@@ -1,0 +1,101 @@
+/* frontend/src/app/recipe/[id]/page.module.css (Versão Melhorada) */
+.main {
+  padding: 2rem;
+  background-color: #F8F7F2; /* Fundo Branco-Gelo */
+  font-family: var(--font-open-sans);
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  border-radius: 1rem;
+  padding: 2rem 3rem; /* Mais espaçamento horizontal */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+.title {
+  font-family: var(--font-montserrat);
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  color: #2D3748;
+}
+
+.summary {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  color: #6B7280;
+  font-weight: 600;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sectionTitle {
+  font-family: var(--font-montserrat);
+  font-size: 1.75rem; /* Aumenta o título da secção */
+  font-weight: 700;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 3px solid #E6F4EA; /* Linha verde pastel */
+  padding-bottom: 0.5rem;
+  color: #2D3748;
+}
+
+/* --- NOVOS ESTILOS PARA A LISTA DE INGREDIENTES --- */
+.ingredientsList {
+  list-style: none;
+  padding: 0;
+  display: grid; /* Usa grid para alinhar */
+  grid-template-columns: 1fr; /* Uma coluna em mobile */
+  gap: 0.75rem; /* Espaçamento entre ingredientes */
+}
+
+/* Em ecrãs maiores, usa duas colunas */
+@media (min-width: 640px) {
+  .ingredientsList {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.ingredientItem {
+  display: flex;
+  border-bottom: 1px solid #F3F4F6; /* Linha cinza clara */
+  padding-bottom: 0.75rem;
+}
+
+.ingredientQuantity {
+  font-weight: 600;
+  color: #1A202C;
+  width: 120px; /* Largura fixa para a quantidade */
+  flex-shrink: 0;
+}
+
+.ingredientName {
+  color: #4A5568;
+}
+
+/* --- NOVOS ESTILOS PARA AS INSTRUÇÕES --- */
+.instructions ol {
+  padding-left: 1.5rem;
+}
+
+.instructions li {
+  margin-bottom: 1.25rem;
+  padding-left: 0.5rem;
+  line-height: 1.7;
+  color: #333333;
+}
+
+.instructions li::marker {
+  font-family: var(--font-montserrat);
+  font-weight: 700;
+  color: #6DBE45; /* Cor verde primária */
+}

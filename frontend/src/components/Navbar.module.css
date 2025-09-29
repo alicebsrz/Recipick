@@ -1,0 +1,103 @@
+/* frontend/src/components/Navbar.module.css */
+.header {
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.nav {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-montserrat);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #333333;
+}
+
+/* --- Menu Desktop --- */
+.desktopMenu {
+  display: none; /* Escondido por defeito (mobile-first) */
+}
+
+.desktopMenu a, .desktopMenu button {
+  font-family: var(--font-open-sans);
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #333333;
+  transition: color 0.3s;
+}
+
+.desktopMenu a:hover {
+  color: #6DBE45; /* Verde Primário */
+}
+
+.signUpButton {
+  background-color: #FF7B54; /* Laranja Acento */
+  color: #FFFFFF;
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  transition: opacity 0.3s;
+}
+
+.signUpButton:hover {
+  opacity: 0.9;
+}
+
+/* --- Menu Mobile --- */
+.mobileMenuButton {
+  display: block; /* Visível por defeito */
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 60;
+}
+
+.mobileMenu {
+  position: absolute;
+  top: 100%; /* Começa logo abaixo da header */
+  left: 0;
+  width: 100%;
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  /* Escondido por defeito */
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.mobileMenu.open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* A partir de ecrãs médios (tablet/desktop) */
+@media (min-width: 768px) {
+  .desktopMenu {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .mobileMenuButton {
+    display: none;
+  }
+}

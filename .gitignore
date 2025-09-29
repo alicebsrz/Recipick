@@ -1,0 +1,169 @@
+# ================================
+# .gitignore para Projeto Monorepo
+# Backend: Python/FastAPI + Frontend: Next.js
+# ================================
+
+# =====================================
+# 1. REGRAS GERAIS (TODO O PROJETO)
+# =====================================
+
+# Variáveis de ambiente
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.production
+
+# Configuração de editores (permitindo extensions.json)
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+
+# Ficheiros do sistema operacional
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Logs gerais
+*.log
+logs/
+
+# =====================================
+# 2. BACKEND (Python/FastAPI)
+# =====================================
+
+# Distribuição / packaging Python
+backend/.Python
+backend/build/
+backend/develop-eggs/
+backend/dist/
+backend/downloads/
+backend/eggs/
+backend/.eggs/
+backend/lib/
+backend/lib64/
+backend/parts/
+backend/sdist/
+backend/var/
+backend/wheels/
+backend/*.egg-info/
+backend/.installed.cfg
+backend/*.egg
+backend/MANIFEST
+
+# PyInstaller
+backend/*.manifest
+backend/*.spec
+
+# Unit test / coverage reports
+backend/htmlcov/
+backend/.tox/
+backend/.coverage
+backend/.coverage.*
+backend/.cache
+backend/nosetests.xml
+backend/coverage.xml
+backend/*.cover
+backend/.hypothesis/
+backend/.pytest_cache/
+
+# Jupyter Notebook
+backend/.ipynb_checkpoints
+
+# mypy
+backend/.mypy_cache/
+backend/.dmypy.json
+backend/dmypy.json
+
+# Base de dados SQLite
+backend/*.db
+backend/*.sqlite3
+backend/*.sqlite
+backend/database.db
+backend/recipes.db
+
+# =====================================
+# 3. FRONTEND (Next.js)
+# =====================================
+
+# Dependências
+frontend/node_modules/
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/lerna-debug.log*
+
+# Coverage directory
+frontend/coverage/
+frontend/*.lcov
+
+# nyc test coverage
+frontend/.nyc_output
+
+# TypeScript cache
+frontend/*.tsbuildinfo
+
+# Optional npm cache directory
+frontend/.npm
+
+# Optional eslint cache
+frontend/.eslintcache
+
+# Next.js build output
+frontend/.next/
+frontend/out/
+
+# Nuxt.js build / generate output
+frontend/.nuxt
+frontend/dist
+
+# Gatsby files
+frontend/.cache/
+frontend/public
+
+# Storybook build outputs
+frontend/.out
+frontend/.storybook-out
+
+# Temporary folders
+frontend/tmp/
+frontend/temp/
+
+# =====================================
+# 4. ARQUIVOS ESPECÍFICOS DO PROJETO
+# =====================================
+
+# Chaves API e configurações sensíveis
+backend/config.py
+backend/secrets.json
+
+# Uploads e ficheiros temporários
+backend/uploads/
+backend/static/uploads/
+frontend/public/uploads/
+
+# Backups de base de dados
+*.sql
+*.dump
+*.backup
+
+# Certificados SSL
+*.pem
+*.key
+*.crt
+
+# =====================================
+# 5. REGRAS FINAIS
+# =====================================
+
+# Ficheiros temporários do Mac finder
+**/.DS_Store

@@ -1,0 +1,102 @@
+/* frontend/src/components/HowItWorks.module.css (Nova Versão com Linha) */
+
+.section {
+  width: 100%;
+  padding: 4rem 1.5rem;
+  background-color: #FAC898; /* << A COR PÊSSEGO QUE VOCÊ ESCOLHEU */
+}
+
+.container {
+  max-width: 1024px; /* Um pouco mais estreito para focar */
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  font-family: var(--font-montserrat);
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #2D3748;
+  margin-bottom: 4rem; /* Mais espaço abaixo do título */
+}
+
+.stepsGrid {
+  position: relative; /* Essencial para a linha de conexão */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem; /* Mais espaçamento vertical em mobile */
+}
+
+.step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative; /* Garante que o número fique corretamente posicionado */
+  max-width: 300px;
+}
+
+.iconWrapper {
+  background-color: #FFFFFF; /* Círculo branco */
+  border-radius: 9999px;
+  padding: 1.75rem; /* 28px */
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  z-index: 2; /* Fica por cima da linha */
+  border: 4px solid #F8F7F2; /* Borda subtil da cor de fundo da página */
+}
+
+.stepNumber {
+  position: absolute;
+  top: 100px; /* Posição do número abaixo do ícone */
+  font-family: var(--font-montserrat);
+  font-weight: 700;
+  color: #2D3748;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.stepTitle {
+  font-family: var(--font-montserrat);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 2rem; /* Espaço para o número */
+  margin-bottom: 0.5rem;
+}
+
+.stepDescription {
+  color: #4A5568;
+}
+
+/* Estilos para desktop */
+@media (min-width: 768px) {
+  .stepsGrid {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  /* A LINHA DE CONEXÃO */
+  .stepsGrid::before {
+    content: '';
+    position: absolute;
+    top: 60px; /* Alinha verticalmente com os ícones */
+    left: 15%;
+    width: 70%;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.5); /* Linha branca semi-transparente */
+    z-index: 1; /* Fica por baixo dos ícones */
+  }
+}
